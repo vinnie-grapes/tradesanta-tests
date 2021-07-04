@@ -12,7 +12,7 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class GeneratedTests extends TestBase {
+public class TradesantaTests extends TestBase {
 
     static final String BASE_URL = "https://tradesanta.com/ru/";
 
@@ -73,12 +73,12 @@ public class GeneratedTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Page title should have header text")
+    @DisplayName("Тайтл страницы содержит текст из хедера")
     void titleTest() {
         step("Open url 'https://tradesanta.com/ru'", () -> {
             open(BASE_URL);
         });
-        step("Page title should have text 'TradeSanta: Торговые боты для Binance, Huobi, Okex & Hitbtc'", () -> {
+        step("Тайтл страницы содержит текст 'TradeSanta: Торговые боты для Binance, Huobi, Okex & Hitbtc'", () -> {
             String expectedTitle = "TradeSanta: Торговые боты для Binance, Huobi, Okex & Hitbtc";
             String actualTitle = title();
 
@@ -87,12 +87,12 @@ public class GeneratedTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Page console log should not have errors")
+    @DisplayName("Проверить что в консоли нет ошибок")
     void consoleShouldNotHaveErrorsTest() {
         step("Open url 'https://tradesanta.com/ru'", () -> {
             open(BASE_URL);
         });
-        step("Console logs should not contain text 'SEVERE'", () -> {
+        step("Проверить что в консоли нет 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
             String errorText = "SEVERE";
 
