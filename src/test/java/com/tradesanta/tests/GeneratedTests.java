@@ -33,7 +33,6 @@ public class GeneratedTests extends TestBase {
         step("Open url https://tradesanta.com/ru", () -> {
             open(BASE_URL);
         });
-
         step("Проверить что есть надпись 'Автоматизированная торговля криптовалютой'", () -> {
             $(".position-relative").shouldHave(text("Автоматизированная торговля криптовалютой"));
         });
@@ -76,8 +75,9 @@ public class GeneratedTests extends TestBase {
     @Test
     @DisplayName("Page title should have header text")
     void titleTest() {
-        step("Open url 'https://tradesanta.com/ru'", () ->
-                open(BASE_URL);
+        step("Open url 'https://tradesanta.com/ru'", () -> {
+            open(BASE_URL);
+        });
         step("Page title should have text 'TradeSanta: Торговые боты для Binance, Huobi, Okex & Hitbtc'", () -> {
             String expectedTitle = "TradeSanta: Торговые боты для Binance, Huobi, Okex & Hitbtc";
             String actualTitle = title();
@@ -89,8 +89,9 @@ public class GeneratedTests extends TestBase {
     @Test
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
-        step("Open url 'https://tradesanta.com/ru'", () ->
-                open(BASE_URL);
+        step("Open url 'https://tradesanta.com/ru'", () -> {
+            open(BASE_URL);
+        });
         step("Console logs should not contain text 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
             String errorText = "SEVERE";
