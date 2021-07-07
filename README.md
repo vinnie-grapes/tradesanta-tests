@@ -1,6 +1,6 @@
 ## Используемые технологии и инструменты
 
-Тесты были написаны на IntelliJ IDEA + Java + JUnit5 + Selenide + Gradle
+Тесты были написаны на IntelliJ IDEA + Java + Gradle + JUnit5 + Selenide 
 
 | IntelliJ IDEA | Java | Gradle | Junit5 | Selenide |
 |:----:|:----:|:------:|:------:|:--------:|
@@ -20,7 +20,7 @@
 
 ## Запуск через Jenkins https://jenkins.autotests.cloud/job/tradesanta-tests/
 
-### С какими параметрами можно запустить тесты:
+### Доступные параметры запуска тестов 
 
 * browser (default chrome)
 * browserVersion (default 89.0)
@@ -54,20 +54,20 @@ allure serve build/allure-results
 ### Пример прогона теста в Selenoid
 ![alt "Video from Selenoid"](./images/selenoid_video.gif "Video from Selenoid")
 
-## После прогона формируется отчет в Allure
+## После прогона формируется отчет в Allure :checkered_flag:	
 ![alt "Allure Dashboard"](./images/allure_dashboard.png)
 ![alt "Allure Report"](./images/run_report.png)
 
 ### В аттаче каждого теста есть логи, скриншоты и видео прохождения каждого теста
 ![alt "Allure Attachments"](./images/attachments.png)
 
-### Сейчас один из тестов падает из-за ошибки на сайте
+### Сейчас один из тестов падает из-за ошибки на сайте :x:
 ![alt "Failed Test"](./images/fail_test.png)
 
 ## Хранение и анализ тестов в Allure TestOps
 ![alt "Allure TestOps"](./images/allure_testops_cases.png)
 
-## В Telegram отправляется уведомление с результатами
+## В Telegram отправляется уведомление с результатами :envelope_with_arrow:	
 ![alt "Выбор параметров"](./images/telegram.png)
 
 
